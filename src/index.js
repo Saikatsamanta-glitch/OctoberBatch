@@ -1,17 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-
+import ReactDOM from "react-dom/client";
+import React from "react";
+import Footer from "./fotterBar";
+import NavScrollExample from './appBar';
+import style from './style.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ProCard from "./productCard";
+import Cardcontainer from "./CardContainer";
+// tag / root
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+
+// React fragments sugar form
+root.render(
+        <>
+                <NavScrollExample />
+                <h1 className="text-center mt-3">Welcome to Skolar store 💪</h1>
+                <hr />
+                <Cardcontainer/>
+
+        </>
+
+)
