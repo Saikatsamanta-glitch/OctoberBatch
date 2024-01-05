@@ -6,7 +6,7 @@ function Cardcontainer() {
         const [product,setproduct] = useState([])
 
         async function fetchdata(){
-                const response =await axios('https://fakestoreapi.com/products');
+                const response =await axios('http://localhost:5000/');
                 setproduct(response.data)
         }
         useEffect(fetchdata,[])

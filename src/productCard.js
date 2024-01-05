@@ -4,13 +4,10 @@ import Card from 'react-bootstrap/Card';
 function ProCard({data}) {
   return (
     <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" height="300px" src={data.image} />
+      <Card.Img variant="top" height="300px" src={data.img} />
       <Card.Body>
-        <Card.Title>{data.title}</Card.Title>
-        <Card.Text>
-        {data.description}
-        </Card.Text>
-        <Button variant="primary">Add to Cart</Button>
+        <Card.Title>{data.name}</Card.Title>
+        <Button variant="primary">Add to Cart : {data.cost}</Button>
       </Card.Body>
     </Card>
   );
