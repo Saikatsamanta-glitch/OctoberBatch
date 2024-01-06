@@ -3,11 +3,11 @@ import axios from "axios";
 import ProCard from "./productCard";
 // hooks: manipulate date in react js
 function Cardcontainer() {
-        const [product,setproduct] = useState([])
+        const [product, setProduct] = useState([])
 
         async function fetchdata(){
                 const response =await axios('http://localhost:5000/');
-                setproduct(response.data)
+                setProduct(response.data)
         }
         useEffect(fetchdata,[])
 
@@ -16,7 +16,7 @@ function Cardcontainer() {
                 <div className="container d-flex flex-wrap gap-5 justify-content-center">
                 {
                         product.map(v=>{
-                                return <ProCard data={v}/>
+                                return <ProCard key={v.name} data={v}/>
                         })
                 }
                         
